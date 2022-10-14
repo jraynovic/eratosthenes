@@ -1,3 +1,8 @@
+//label all numbers prime
+//iterate from 2 -> sqrt of n
+// if num is multiple of 2-> n label as not prime
+//return remaining numbers
+
 function eratosthenes(n) {
   const array = []; // placeholder to create array true/false from 2 to n-1 
   const upperLimit = Math.sqrt(n);
@@ -11,7 +16,7 @@ function eratosthenes(n) {
 
   for (let i = 2; i <= upperLimit; i++) { // loop from 2 to sqrt of n
     if (array[i]) { // if that index is true
-      for (var j = i * i; j < n; j += i) { //j = 2*2(4) next iter 4+2, 6+2, 8+2
+      for (let j = i * i; j < n; j += i) { //j = 2*2(4) next iter 4+2, 6+2, 8+2
         array[j] = false; // set all the multiples to false
       }
     }
